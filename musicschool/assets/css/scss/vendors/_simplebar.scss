@@ -1,0 +1,19 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// simplebar
+// ==========================================================================
+.simplebar-scrollbar::before {
+  inset: 0;
+  background: rgba(80, 80, 80, 25%);
+  border-radius: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
+}
+
+.simplebar-track.simplebar-horizontal {
+  height: get_rem(25px);
+  background: rgba(80, 80, 80, 15%);
+}

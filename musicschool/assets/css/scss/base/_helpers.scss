@@ -1,0 +1,56 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// helpers
+// ==========================================================================
+.inner {
+  max-width: 920px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+
+.br-sp {
+  @include mq_up {
+    display: none;
+  }
+}
+
+.br-pc {
+  display: none;
+
+  @include mq_up {
+    display: inline;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.title {
+  font-size: get_rem(25px);
+  font-weight: 700;
+  line-height: get_lh(40px, 25px);
+  text-align: center;
+
+  @include mq_up {
+    font-size: get_rem(30px);
+    font-weight: 700;
+    line-height: get_lh(50px, 30px);
+  }
+}
+
+.page-title {
+  font-size: get_rem(25px);
+  font-weight: 700;
+  line-height: get_lh(40px, 25px);
+  text-align: center;
+}
+
+.ellipsis {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

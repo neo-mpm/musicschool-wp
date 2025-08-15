@@ -1,0 +1,71 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// pager
+// ==========================================================================
+.pager {
+  margin-top: get_rem(57px);
+  font-size: get_rem(16px);
+  font-weight: 700;
+  line-height: get_lh(28px, 16px);
+
+  @include mq_up {
+    margin-top: get_rem(70px);
+  }
+}
+
+.pager__list {
+  display: flex;
+  column-gap: get_rem(5px);
+  justify-content: center;
+
+  @include mq_up {
+    column-gap: get_rem(10px);
+  }
+}
+
+.pager__inner {
+  display: grid;
+  place-items: center;
+  min-width: get_rem(44px);
+  height: get_rem(44px);
+  padding: get_rem(2px) get_rem(5px) 0;
+  border: 1px solid black;
+
+  @include mq_up {
+    min-width: get_rem(50px);
+    height: get_rem(50px);
+  }
+
+  .pager__item--dot & {
+    min-width: get_rem(17px);
+    padding: get_rem(2px) 0 0;
+    border: none;
+  }
+}
+
+.pager__item--active {
+  color: white;
+  background: black;
+}
+
+.pager__item--dot {
+  margin: 0 get_rem(7px) 0 get_rem(6px);
+
+  @include mq_up {
+    margin: 0 get_rem(11px) 0 get_rem(10px);
+  }
+}
+
+.pager__link {
+  width: 100%;
+  height: 100%;
+
+  &:hover,
+  &:active {
+    color: white;
+    text-decoration: none;
+    background: black;
+    opacity: unset;
+  }
+}

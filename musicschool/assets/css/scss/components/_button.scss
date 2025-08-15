@@ -1,0 +1,27 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// button
+// ==========================================================================
+.button {
+  display: grid;
+  place-items: center;
+  color: white;
+  appearance: none;
+  cursor: pointer;
+  background: var(--main-color);
+  border: 1px solid var(--main-color);
+
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  &:hover,
+  &:active {
+    color: var(--main-color);
+    text-decoration: none;
+    background: white;
+    opacity: unset;
+  }
+}

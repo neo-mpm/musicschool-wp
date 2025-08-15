@@ -1,0 +1,117 @@
+@use 'config' as *;
+
+// ==========================================================================
+// base
+// ==========================================================================
+:root {
+  --main-color: #cb0000;
+}
+
+html {
+  font-size: $default_font_size;
+
+  @include mq_down {
+    font-size: get_vw($default_font_size);
+  }
+
+  @include mq_up {
+    font-size: min_vw_eq($default_font_size, lg);
+  }
+}
+
+body {
+  position: relative;
+  font-family: $sans_serif_font;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: get_lh(30px, 16px);
+
+  @include mq_up {
+    min-height: calc(100vh - get_rem(80px));
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body * {
+  max-height: 1000000em; /* Chrome for Android */
+  text-size-adjust: 100%;
+}
+
+.img-100 {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.img-w-100 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a,
+button {
+  transition: 0.3s all;
+
+  &:link,
+  &:visited {
+    color: black;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    opacity: 0.7;
+  }
+}
+
+main {
+  padding-bottom: get_rem(43px);
+  margin-top: get_rem(50px);
+
+  @include mq_up {
+    padding-bottom: get_rem(47px);
+    margin-top: get_rem(80px);
+  }
+}
+
+// ==========================================================================
+// reset
+// ==========================================================================
+
+:is(h1, h2, h3, h4, h5) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:is(body, h1, h2, h3, h4, h5, p, ul, li, dl, dt, dd, form, label, fieldset, input, button) {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+// ==========================================================================
+// z-index
+// ==========================================================================
+.header {
+  z-index: 30;
+}
+
+.header__nav {
+  z-index: 40;
+}
+
+.hero__head {
+  z-index: 10;
+}
+
+.links {
+  z-index: 20;
+}

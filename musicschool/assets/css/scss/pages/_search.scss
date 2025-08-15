@@ -1,0 +1,46 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// search
+// ==========================================================================
+.search {
+  padding-bottom: get_rem(58px);
+
+  @include mq_up {
+    padding-bottom: get_rem(53px);
+  }
+}
+
+// ==========================================================================
+// search-content
+// ==========================================================================
+.search-content.blog-content {
+  padding-top: get_rem(37px);
+
+  @include mq_up {
+    padding-top: get_rem(68px);
+  }
+}
+
+.search-content__head.blog-content__head {
+  display: flex;
+  justify-content: space-between;
+  font-size: get_rem(18px);
+  line-height: get_lh(30px, 18px);
+
+  @include mq_up {
+    font-size: get_rem(18px);
+    line-height: get_lh(30px, 18px);
+  }
+}
+
+.search-content__container.blog-content__container {
+  margin-top: get_rem(40px);
+}
+
+// ==========================================================================
+// search-content-head
+// ==========================================================================
+.search-content-head__text--bold {
+  font-weight: 700;
+}

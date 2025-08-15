@@ -1,0 +1,80 @@
+@use 'sass:math';
+@use 'sass:map';
+
+// ==========================================================================
+// variables
+// ==========================================================================
+
+// sans-serif font
+$sans_serif_font: 'Yu Gothic', 'YuGothic', 'Noto Sans JP', 'メイリオ', 'Meiryo', sans-serif;
+
+// default font size
+$default_font_size: 16px;
+
+// font size lists
+$font-sizes: (
+  'sm': $default_font_size,
+  'md': $default_font_size,
+  'lg': $default_font_size,
+  'xl': $default_font_size,
+) !default;
+
+// breakpoints media query
+$breakpoints: (
+  'sm': 375px,
+  'md': 768px,
+  'lg': 920px,
+  'lg-ex': 1006px,
+) !default;
+
+// breakpoints up
+$breakpoints_up: (
+  'md': '(width >= #{map.get($breakpoints, 'md')})',
+  'lg': '(width >= #{map.get($breakpoints, 'lg')})',
+  'lg-ex': '(width >= #{map.get($breakpoints, 'lg-ex')})',
+) !default;
+
+// breakpoints down
+$breakpoints_down: (
+  'sm': '(width < #{map.get($breakpoints, 'sm')})',
+) !default;
+
+// ==========================================================================
+// functions
+// ==========================================================================
+
+@function get_rem($length, $root_length: $default_font_size) {
+  @return math.div(round(math.div($length, $root_length) * 10000), 10000) * 1rem;
+}
+
+@function get_em($length, $parent_length: $default_font_size) {
+  @return math.div(round(math.div($length, $parent_length) * 10000), 10000) * 1em;
+}
+
+@function get_lh($line-height: 30, $font-size: $default_font_size) {
+  @return math.div(round(math.div($line-height, $font-size) * 10000), 10000);
+}
+
+@function get_vw($length, $viewport: sm) {
+  @return math.div(round(math.div(100, map.get($breakpoints, $viewport)) * $length * 10000), 10000) * 1vw;
+}
+
+@function min_vw_eq($default_length: 16, $viewport: sm) {
+  @return min(get_vw($default_length, $viewport), $default_length);
+}
+
+// ==========================================================================
+// mixins
+// ==========================================================================
+
+@mixin mq_up($breakpoint: md) {
+  @media #{map.get($breakpoints_up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq_down($breakpoint: sm) {
+  @media #{map.get($breakpoints_down, $breakpoint)} {
+    @content;
+  }
+}

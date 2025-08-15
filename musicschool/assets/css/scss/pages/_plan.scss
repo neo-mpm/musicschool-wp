@@ -1,0 +1,264 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// plan
+// ==========================================================================
+.plan {
+  padding-bottom: get_rem(40px);
+
+  @include mq_up {
+    padding-bottom: get_rem(65px);
+  }
+}
+
+/* --------------------------------------------------
+plan-topic
+-------------------------------------------------- */
+.plan-topic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: get_rem(47px);
+
+  @include mq_up {
+    padding-top: get_rem(66px);
+  }
+}
+
+.plan-topic__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: get_rem(20px);
+  align-items: center;
+  margin-top: get_rem(38px);
+
+  @include mq_up {
+    flex-direction: unset;
+    column-gap: get_rem(29px);
+    width: fit-content;
+    margin-inline: auto;
+  }
+}
+
+.plan-topic__box {
+  display: grid;
+  place-items: center;
+  width: get_rem(210px);
+  height: get_rem(60px);
+  font-size: get_rem(20px);
+  line-height: get_lh(33px, 20px);
+  color: white;
+  background: var(--main-color);
+}
+
+.plan-topic__image {
+  width: get_rem(19px);
+}
+
+.plan-topic__text {
+  margin-top: get_rem(47px);
+  font-size: get_rem(16px);
+  line-height: get_lh(30px, 16px);
+
+  @include mq_up {
+    max-width: 890px;
+    margin-top: get_rem(50px);
+    font-size: get_rem(18px);
+    line-height: get_lh(30px, 18px);
+  }
+}
+
+/* --------------------------------------------------
+plan-content
+-------------------------------------------------- */
+.plan-content {
+  padding-top: get_rem(38px);
+
+  @include mq_up {
+    padding-top: get_rem(57px);
+  }
+}
+
+.plan-content__head {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.plan-content__container {
+  padding: get_rem(16px) 0 get_rem(42px);
+  overflow-x: auto;
+
+  @media (width > 713px) {
+    padding-bottom: get_rem(18px);
+  }
+
+  @include mq_up {
+    padding: get_rem(46px) 0 get_rem(18px);
+  }
+}
+
+.plan-content__table {
+  width: 100%;
+  max-width: get_rem(874px);
+  font-size: get_rem(16px);
+  line-height: get_lh(30px, 16px);
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-bottom: 1px solid;
+
+  @include mq_up {
+    margin-inline: auto;
+  }
+}
+
+.plan-content__tr {
+  tbody &:nth-child(even) {
+    background-color: rgb(80, 80, 80, 15%);
+  }
+}
+
+.plan-content__th,
+.plan-content__td {
+  height: get_rem(85px);
+  padding: 0;
+  text-align: center;
+}
+
+.plan-content__th {
+  width: get_rem(169px);
+  vertical-align: bottom;
+  color: white;
+  border-bottom: 1px solid black;
+
+  @include mq_up {
+    width: unset;
+    min-width: get_rem(218px);
+    height: get_rem(80px);
+  }
+
+  &:first-child {
+    width: get_rem(167px);
+
+    @include mq_up {
+      width: unset;
+      min-width: get_rem(220px);
+    }
+  }
+
+  &:nth-child(3) {
+    background: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+  }
+}
+
+.plan-content__td {
+  padding-top: get_rem(3px);
+  border-right: 1px solid black;
+
+  &:first-child {
+    padding-left: get_rem(9px);
+    text-align: left;
+
+    @include mq_up {
+      padding-left: get_rem(17px);
+    }
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.plan-content__text {
+  font-size: get_rem(17px);
+  line-height: get_lh(27px, 17px);
+
+  .plan-content__td & {
+    font-size: get_rem(16px);
+    line-height: get_lh(25px, 16px);
+
+    @include mq_up {
+      font-size: get_rem(17px);
+      line-height: get_lh(25px, 17px);
+    }
+  }
+
+  .plan-content__th & {
+    font-size: get_rem(20px);
+    line-height: get_lh(25px, 20px);
+
+    @include mq_up {
+      font-size: get_rem(20px);
+      line-height: get_lh(33px, 20px);
+    }
+  }
+
+  .plan-content__th:nth-child(3) & {
+    position: relative;
+    top: get_rem(-6px);
+  }
+
+  tbody .plan-content__tr:first-child & {
+    font-size: get_rem(22px);
+    font-weight: 700;
+    line-height: get_lh(33px, 22px);
+  }
+
+  tbody .plan-content__tr:first-child .plan-content__td:first-child & {
+    font-size: get_rem(16px);
+    font-weight: 700;
+    line-height: get_lh(30px, 16px);
+  }
+
+  tbody .plan-content__tr:first-child .plan-content__td:nth-child(3) & {
+    color: var(--main-color);
+  }
+}
+
+.plan-content__small {
+  font-size: 0.8em;
+}
+
+.plan-content__box {
+  display: grid;
+  place-items: center;
+  height: get_rem(66px);
+  padding-top: get_rem(4px);
+  background: black;
+  border: 1px solid black;
+
+  @include mq_up {
+    height: 49px;
+  }
+}
+
+.plan-content__circle {
+  display: inline-block;
+  width: get_rem(15px);
+  height: get_rem(15px);
+  background: black;
+  border-radius: 50%;
+
+  tbody .plan-content__td:nth-child(3) & {
+    background: var(--main-color);
+  }
+}
+
+.plan-content__line {
+  display: inline-block;
+  width: get_rem(30px);
+  height: get_rem(8px);
+  border-top: 1px solid black;
+}
+
+.plan-content__notice {
+  margin-top: get_rem(16px);
+  font-size: get_rem(16px);
+  line-height: get_lh(30px, 16px);
+
+  @include mq_up {
+    margin-top: get_rem(10px);
+    font-size: get_rem(17px);
+    line-height: get_lh(25px, 17px);
+  }
+}

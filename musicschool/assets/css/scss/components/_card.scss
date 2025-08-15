@@ -1,0 +1,79 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// card
+// ==========================================================================
+.card__image-box {
+  display: grid;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.card__tag,
+.card__image {
+  grid-area: 1 / 1;
+}
+
+.card__tag {
+  display: grid;
+  place-items: center;
+  width: fit-content;
+  min-width: get_rem(90px);
+  height: get_rem(30px);
+  padding-inline: get_rem(10px);
+  font-size: get_rem(15px);
+  font-weight: 700;
+  line-height: get_lh(25px, 15px);
+  color: white;
+  text-align: center;
+  background: var(--main-color);
+
+  @include mq_up {
+    min-width: get_rem(80px);
+  }
+}
+
+.card__title {
+  margin-top: get_rem(30px);
+  font-size: get_rem(20px);
+  font-weight: 700;
+  line-height: get_lh(30px, 20px);
+
+  @include mq_up {
+    margin-top: get_rem(20px);
+    line-height: get_lh(25px, 20px);
+  }
+}
+
+.card__title-link {
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    opacity: 0.5;
+  }
+}
+
+.card__date {
+  display: block;
+  margin-top: get_rem(6px);
+  font-size: get_rem(17px);
+  line-height: get_lh(30px, 17px);
+  text-align: right;
+
+  @include mq_up {
+    margin-top: get_rem(12px);
+  }
+}
+
+.card__text {
+  margin-top: get_rem(10px);
+  font-size: get_rem(16px);
+  line-height: get_lh(30px, 16px);
+}
+
+.card__text--list {
+  -webkit-line-clamp: 5;
+}

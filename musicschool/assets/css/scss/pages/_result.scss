@@ -1,0 +1,44 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// result
+// ==========================================================================
+.result {
+  padding-bottom: get_rem(57px);
+
+  @include mq_up {
+    padding-bottom: get_rem(53px);
+  }
+}
+
+/* --------------------------------------------------
+result-content
+-------------------------------------------------- */
+.result-content {
+  padding-top: get_rem(50px);
+
+  @include mq_up {
+    padding-top: get_rem(67px);
+  }
+}
+
+.result-content__container {
+  display: grid;
+  row-gap: get_rem(37px);
+  margin-top: get_rem(38px);
+
+  @include mq_up {
+    grid-template-columns: repeat(2, 1fr);
+    gap: get_rem(71px) get_rem(106px);
+  }
+}
+
+.result-content__card.card {
+  .card__img {
+    aspect-ratio: 335 / 236;
+  }
+
+  .card__tag {
+    min-width: get_rem(100px);
+  }
+}

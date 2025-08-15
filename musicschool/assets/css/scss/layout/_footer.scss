@@ -1,0 +1,177 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// links
+// ==========================================================================
+.links {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  margin: 0 0 get_rem(-1px) auto;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  @include mq_up {
+    width: fit-content;
+    min-width: get_rem(300px);
+  }
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.links__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  pointer-events: none;
+
+  @include mq_up {
+    align-items: center;
+    padding-inline: unset;
+  }
+}
+
+.links__to-top {
+  display: block;
+  width: get_rem(68px);
+  height: get_rem(68px);
+  margin-bottom: get_rem(20px);
+  pointer-events: auto;
+  cursor: pointer;
+  border-radius: 50%;
+
+  @include mq_up {
+    margin-bottom: get_rem(30px);
+  }
+
+  svg {
+    width: 99%;
+    height: 99%;
+    margin: 0;
+    border-radius: 50%;
+    opacity: 0.502;
+  }
+}
+
+/* --------------------------------------------------
+links-to-contact
+-------------------------------------------------- */
+.links-to-contact {
+  width: 100%;
+  max-width: get_rem(335px);
+  height: get_rem(60px);
+  padding-top: get_rem(3px);
+  margin-inline: auto;
+  font-size: get_rem(20px);
+  font-weight: 700;
+  line-height: get_lh(33px, 20px);
+  letter-spacing: get_rem(4px);
+  pointer-events: auto;
+
+  @include mq_up {
+    width: get_rem(300px);
+    margin-inline: auto 0;
+  }
+}
+
+.links-to-contact__span {
+  margin-right: get_rem(-4px);
+}
+
+// ==========================================================================
+// footer
+// ==========================================================================
+.footer {
+  @include mq_up {
+    position: sticky;
+    top: 100vh;
+    width: 100%;
+  }
+}
+
+.footer__container {
+  padding: get_rem(45px) get_rem(20px) get_rem(51px);
+  color: white;
+  background: var(--main-color);
+}
+
+.footer__list {
+  display: flex;
+  column-gap: get_rem(29px);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: get_rem(18px);
+  font-size: get_rem(17px);
+  font-weight: 700;
+  line-height: get_lh(33px, 17px);
+
+  @include mq_up {
+    column-gap: get_rem(33px);
+  }
+}
+
+.footer__link[class] {
+  color: white;
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.5;
+  }
+}
+
+.footer__logo-link {
+  display: block;
+  width: get_rem(32px);
+  margin: 0 auto get_rem(28px);
+  fill: white;
+
+  @include mq_up {
+    width: get_rem(35px);
+    margin-bottom: get_rem(28px);
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.footer__logo {
+  aspect-ratio: 32 / 49;
+}
+
+.footer__copy {
+  line-height: get_rem(20px); // smallにline-heightを指定できないので、ここで指定
+  text-align: center;
+
+  small {
+    font-size: get_rem(15px);
+  }
+}
+
+.footer-sns {
+  display: flex;
+  column-gap: get_rem(5px);
+  column-gap: 10px;
+  justify-content: center;
+  width: fit-content;
+  margin: get_rem(15px) auto 0;
+
+  @include mq_up {
+    margin-top: get_rem(5px);
+  }
+}
+
+.footer-sns__link {
+  width: get_rem(23px);
+  height: get_rem(23px);
+}
+
+.footer-sns__icon {
+  width: 100%;
+  height: 100%;
+}
