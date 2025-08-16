@@ -39,6 +39,11 @@ function add_files()
         wp_enqueue_style('swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), NULL);
     }
 
+    // simplebar css
+    if (is_page('plan')) {
+        wp_enqueue_style('simplebar-style', 'https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.css', array(), NULL);
+    }
+
     // 共通のcss
     wp_enqueue_style('common-style');
 
@@ -51,6 +56,10 @@ function add_files()
     // swiper js
     if (is_front_page()) {
         wp_enqueue_script('swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), NULL, true);
+    }
+
+    if (is_page('plan')) {
+        wp_enqueue_script('simplebar-script', 'https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.5/simplebar.min.js', array(), NULL, true);
     }
 
     // 共通のjs
