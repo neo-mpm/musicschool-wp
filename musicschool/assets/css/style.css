@@ -529,12 +529,7 @@ details-bottom
 }
 
 .details-bottom__box {
-  width: 9.75rem;
-}
-@media (width >= 768px) {
-  .details-bottom__box {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .details-bottom__link {

@@ -188,11 +188,7 @@ details-bottom
 }
 
 .details-bottom__box {
-  width: get_rem(156px);
-
-  @include mq_up {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .details-bottom__link {
