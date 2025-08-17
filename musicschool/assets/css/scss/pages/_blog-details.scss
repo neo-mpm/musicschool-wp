@@ -125,29 +125,6 @@ blog-details-sns
 }
 
 /* --------------------------------------------------
-blog-details-quotation
--------------------------------------------------- */
-.blog-details-quotation {
-  display: flex;
-  column-gap: get_rem(18px);
-  padding: get_rem(16px) get_rem(20px) get_rem(11px) get_rem(25px);
-  margin-bottom: get_rem(28px);
-  background: #e8e8e8;
-
-  @include mq_up {
-    column-gap: get_rem(9px);
-    padding: get_rem(18px) get_rem(30px) get_rem(10px) get_rem(31px);
-  }
-}
-
-.blog-details-quotation__image {
-  flex-shrink: 0;
-  width: get_rem(27px);
-  height: get_rem(23px);
-  margin-top: get_rem(2px);
-}
-
-/* --------------------------------------------------
 blog-details-magazine
 -------------------------------------------------- */
 .blog-details-magazine {
@@ -274,13 +251,17 @@ blog-details-recommend
     @include mq_up {
       width: get_rem(95px);
     }
-  }
 
-  .card__img {
-    aspect-ratio: 160 / 110;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 160 / 110;
+      object-fit: cover;
 
-    @include mq_up {
-      aspect-ratio: 95 / 75;
+      @include mq_up {
+        aspect-ratio: 95 / 75;
+      }
     }
   }
 

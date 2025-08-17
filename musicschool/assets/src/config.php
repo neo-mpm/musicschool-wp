@@ -25,6 +25,9 @@ define('ASSETS_URI', get_template_directory_uri() . '/assets');
 // server name
 define('SERVER_NAME', 'https://' . $_SERVER['SERVER_NAME']);
 
+// no image
+define('NO_IMAGE_URI', ASSETS_URI . '/img/no-image.png');
+
 // nav menu
 global $navMenu;
 $navMenu = [
