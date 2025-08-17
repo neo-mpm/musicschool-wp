@@ -69,13 +69,17 @@ blog-content
     @include mq_up {
       width: get_rem(260px);
     }
-  }
 
-  .card__img {
-    aspect-ratio: 335 / 200;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 335 / 200;
+      object-fit: cover;
 
-    @include mq_up {
-      aspect-ratio: 260 / 184;
+      @include mq_up {
+        aspect-ratio: 260 / 184;
+      }
     }
   }
 }

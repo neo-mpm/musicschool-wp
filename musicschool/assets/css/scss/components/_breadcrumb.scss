@@ -1,0 +1,67 @@
+@use '../base/config' as *;
+
+// ==========================================================================
+// breadcrumb
+// ==========================================================================
+.breadcrumb {
+  height: get_rem(36px);
+  white-space: nowrap;
+  background: #e8e8e8;
+
+  @include mq_up {
+    height: get_rem(50px);
+  }
+}
+
+.breadcrumb__inner {
+  height: 100%;
+}
+
+.breadcrumb__container {
+  display: flex;
+  column-gap: get_rem(20px);
+  align-items: center;
+  height: 100%;
+  overflow-x: auto;
+  font-size: get_rem(16px);
+  line-height: get_lh(22px, 16px);
+  scrollbar-width: none;
+
+  @include mq_up {
+    overflow: hidden;
+  }
+
+  & > span {
+    display: flex;
+    column-gap: get_rem(20px);
+    align-items: center;
+    height: 100%;
+
+    &:last-of-type {
+      @include mq_up {
+        display: -webkit-box;
+        max-width: 450px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    height: 100%;
+
+    &:hover,
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  span[property='name'] {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}

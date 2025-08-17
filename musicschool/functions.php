@@ -25,7 +25,7 @@ function custom_theme_setup()
 add_action('after_setup_theme', 'custom_theme_setup');
 
 // --------------------------------------------------
-//ファイル読み込み
+// ファイル読み込み
 // --------------------------------------------------
 function add_files()
 {
@@ -66,3 +66,18 @@ function add_files()
     wp_enqueue_script('common-script');
 }
 add_action('wp_enqueue_scripts', 'add_files');
+
+// --------------------------------------------------
+// 1ページに表示する記事数を指定
+// --------------------------------------------------
+function my_page_conditions($query)
+{
+    if (!is_admin() && $query->is_main_query()) {
+        // カスタム投稿のスラッグを記述
+        if (is_post_type_archive('blog')) {
+            // 表示件数を指定
+            $query->set('posts_per_page', 10);
+        }
+    }
+}
+add_action('pre_get_posts', 'my_page_conditions');
