@@ -6,16 +6,9 @@ $title = get_the_title();
 get_header();
 ?>
 <main class="blog-details">
-  <nav class="blog-details__breadcrumb breadcrumb">
-    <div class="breadcrumb__inner inner">
-      <ul class="breadcrumb__list">
-        <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
-        <li class="breadcrumb__item"><a class="breadcrumb__link" href="../blog/">ブログ</a>></li>
-        <li class="breadcrumb__item"><a class="breadcrumb__link" href="./">ギター</a>></li>
-        <li class="breadcrumb__item"><span class="breadcrumb__text ellipsis"><?= $title; ?></span></li>
-      </ul>
-    </div>
-  </nav>
+  <?php
+  get_template_part('template-parts/breadcrumbs');
+  ?>
   <div class="blog-details__inner inner">
     <div class="blog-details__container">
       <div class="blog-details__main">

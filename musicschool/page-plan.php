@@ -15,14 +15,9 @@ get_header();
     </div>
     <h1 class="hero__head"><?= $title ?></h1>
   </section>
-  <nav class="blog__breadcrumb breadcrumb">
-    <div class="breadcrumb__inner inner">
-      <ul class="breadcrumb__list">
-        <li class="breadcrumb__item"><a class="breadcrumb__link" href="../top/">ホーム</a>></li>
-        <li class="breadcrumb__item"><?= $title ?></li>
-      </ul>
-    </div>
-  </nav>
+  <?php
+  get_template_part('template-parts/breadcrumbs');
+  ?>
   <section class="plan__topic plan-topic">
     <div class="plan-topic__inner inner">
       <h2 class="plan-topic__head page-title">料金体系</h2>
