@@ -5,6 +5,7 @@ $post_id = get_the_ID();
 // 投稿タイプに応じて使うタクソノミーを定義（必要に応じて追加可能）
 $taxonomy_map = [
   'blog' => 'blog_cate',
+  'result' => 'genre',
 ];
 
 // 投稿タイプに対応するタクソノミーが定義されているか確認
