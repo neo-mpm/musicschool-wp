@@ -220,7 +220,6 @@ main {
 @media (width >= 768px) {
   .breadcrumb__container > span:last-of-type {
     display: -webkit-box;
-    max-width: 450px;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 1;
@@ -3264,8 +3263,13 @@ result-content
   }
 }
 
-.result-content__card.card .card__img {
+.result-content__card.card img {
+  display: block;
+  width: 100%;
+  height: auto;
   aspect-ratio: 335/236;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .result-content__card.card .card__tag {
   min-width: 6.25rem;

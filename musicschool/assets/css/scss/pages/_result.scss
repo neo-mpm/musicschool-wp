@@ -34,8 +34,12 @@ result-content
 }
 
 .result-content__card.card {
-  .card__img {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
     aspect-ratio: 335 / 236;
+    object-fit: cover;
   }
 
   .card__tag {

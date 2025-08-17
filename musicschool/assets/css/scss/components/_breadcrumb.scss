@@ -40,7 +40,6 @@
     &:last-of-type {
       @include mq_up {
         display: -webkit-box;
-        max-width: 450px;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-line-clamp: 1;
