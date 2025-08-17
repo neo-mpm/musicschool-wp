@@ -101,25 +101,6 @@
   transition-duration: 0.3s;
 }
 
-.header-nav__line {
-  .header-nav__button.open & {
-    transform: rotate(45deg);
-
-    &::before,
-    &::after {
-      top: 0;
-    }
-
-    &::before {
-      transform: rotate(0);
-    }
-
-    &::after {
-      transform: rotate(90deg);
-    }
-  }
-}
-
 @mixin burgerSpan {
   position: absolute;
   width: 100%;
@@ -145,6 +126,23 @@
 
   &::after {
     top: get_rem(12px);
+  }
+
+  .header-nav__button.open & {
+    transform: rotate(45deg);
+
+    &::before,
+    &::after {
+      top: 0;
+    }
+
+    &::before {
+      transform: rotate(0);
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
   }
 }
 
