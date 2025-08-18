@@ -37,9 +37,11 @@
     align-items: center;
     height: 100%;
 
-    &:last-of-type {
+    &:last-of-type span {
       @include mq_up {
         display: -webkit-box;
+        max-width: get_rem(580px);
+        height: auto;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-line-clamp: 1;
@@ -62,5 +64,10 @@
     display: flex;
     align-items: center;
     height: 100%;
+  }
+
+  // class名被りの為やむを得ず打消し
+  .search {
+    padding-bottom: unset;
   }
 }

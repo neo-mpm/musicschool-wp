@@ -77,11 +77,17 @@ add_action('wp_enqueue_scripts', 'add_files');
 // --------------------------------------------------
 function my_page_conditions($query)
 {
+    // 管理画面ではなく、メインクエリの場合のみ実行
     if (!is_admin() && $query->is_main_query()) {
-        // カスタム投稿のスラッグを記述
+        // カスタム投稿タイプ 'blog' または 'result' のアーカイブページの場合
         if (is_post_type_archive('blog', 'result')) {
             // 表示件数を指定
             $query->set('posts_per_page', 10);
+        }
+
+        // 検索結果ページの場合
+        if ($query->is_search()) {
+            $query->set('post_type', 'blog');
         }
     }
 }

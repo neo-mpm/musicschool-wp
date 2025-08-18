@@ -10,10 +10,9 @@
   <aside class="blog-details__search blog-details-search details-aside">
     <h4 class="blog-details-search__head details-aside__title">ブログ内を検索</h4>
     <div class="blog-details-search__container">
-      <form action="../search/" method="post" class="blog-details-search__form">
-        <input type="search" name="search" class="blog-details-search__input" placeholder="" value="">
-        <button type="submit" class="blog-details-search__button"><img src="<?= ASSETS_URI ?>/img/blog/icon/search.svg" alt="" width="24" height="24" loading="lazy"></button>
-      </form>
+      <?php
+      get_search_form();
+      ?>
     </div>
   </aside>
   <aside class="blog-details__recommend blog-details-recommend details-aside">
