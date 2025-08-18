@@ -1015,7 +1015,6 @@ details-related
         -ms-flex-align: center;
             align-items: center;
     height: 100%;
-    padding-right: 0.125rem;
   }
 }
 @media (width >= 768px) {
@@ -1041,6 +1040,7 @@ details-related
 @media (width >= 768px) {
   .header-nav__list a {
     height: 100%;
+    padding-top: 0.3125rem;
     padding-left: unset;
     font-size: 1.0625rem;
     line-height: 1.9412;
@@ -2115,7 +2115,7 @@ top-blog
     -webkit-box-align: unset;
         -ms-flex-align: unset;
             align-items: unset;
-    margin-top: 2rem;
+    margin-top: 2.1875rem;
   }
 }
 
