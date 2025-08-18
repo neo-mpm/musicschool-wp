@@ -48,7 +48,7 @@ details-content
 }
 
 .details-content__body {
-  p {
+  & > p {
     margin-top: get_rem(10px);
     font-size: get_rem(16px);
     line-height: get_lh(30px, 16px);
@@ -89,17 +89,17 @@ details-content
 
   ul,
   ol {
-    padding-left: 1em;
+    padding-left: get_rem(22px);
     margin-top: get_rem(28px);
 
     @include mq_up {
-      margin-top: 28px;
+      font-size: get_rem(18px);
+      line-height: get_lh(30px, 18px);
     }
   }
 
   li {
-    font-size: get_rem(18px);
-    line-height: get_lh(30px, 18px);
+    text-indent: get_rem(-6px);
     list-style: initial;
   }
 
@@ -285,7 +285,7 @@ details-related
   margin-top: get_rem(62px);
 
   @include mq_up {
-    margin-top: get_rem(94px);
+    margin-top: get_rem(100px);
   }
 }
 
