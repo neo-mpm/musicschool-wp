@@ -56,7 +56,7 @@
 
     .extend {
       min-width: get_rem(17px);
-      padding: get_rem(2px) 0 0;
+      padding: 0 0 get_rem(8px);
       margin: 0 get_rem(7px) 0 get_rem(6px);
       border: none;
 
