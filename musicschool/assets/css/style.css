@@ -243,9 +243,14 @@ main {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  padding-top: 0.25rem;
 }
 .breadcrumb__container .search {
   padding-bottom: unset;
+}
+
+.breadcrumbs__sign {
+  padding-top: 0.25rem;
 }
 
 .button,
