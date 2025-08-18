@@ -33,7 +33,7 @@
         while ($the_query->have_posts()): $the_query->the_post();
       ?>
           <li class="blog-details-recommend__item">
-            <a class="blog-details-recommend__card card" href="<?php the_permalink(); ?>">
+            <a class="blog-details-recommend__card card" href="<?php the_permalink() ?>">
               <div class="card__image-box">
                 <div class="card__image">
                   <?php
@@ -47,7 +47,7 @@
                   ?>
                 </div>
               </div>
-              <h5 class="card__title ellipsis"><?php echo wp_trim_words(get_the_title(), 15, '...'); ?></h5>
+              <h5 class="card__title ellipsis"><?= wp_trim_words(get_the_title(), 15, '...') ?></h5>
             </a>
           </li>
       <?php
@@ -70,7 +70,7 @@
           $term_link = get_term_link($term->term_id);
       ?>
           <li class="blog-details-category__item">
-            <a class="blog-details-category__link" href="<?php echo esc_url($term_link); ?>"><?php echo esc_html($term->name); ?></a>
+            <a class="blog-details-category__link" href="<?= esc_url($term_link) ?>"><?= esc_html($term->name) ?></a>
           </li>
       <?php
         endforeach;

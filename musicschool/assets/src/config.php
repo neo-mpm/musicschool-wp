@@ -27,12 +27,3 @@ define('SERVER_NAME', 'https://' . $_SERVER['SERVER_NAME']);
 
 // no image
 define('NO_IMAGE_URI', ASSETS_URI . '/img/no-image.png');
-
-// nav menu
-global $navMenu;
-$navMenu = [
-  'top' => 'ホーム',
-  'plan' => '料金',
-  'blog' => 'ブログ',
-  'result' => '卒業実績'
-];

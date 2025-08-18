@@ -354,20 +354,24 @@ top-voice
     width: get_em(270px);
     overflow: hidden;
   }
-}
 
-.top-voice__img {
-  aspect-ratio: 335 / 200;
-  transition: 0.3s all;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 335 / 200;
+    object-fit: cover;
+    transition: 0.3s all;
 
-  @include mq_up {
-    aspect-ratio: 270 / 190;
-  }
+    @include mq_up {
+      aspect-ratio: 270 / 190;
+    }
 
-  .top-voice__link:hover &,
-  .top-voice__link:active & {
-    transform: scale(1.1);
-    transform-origin: center;
+    .top-voice__link:hover &,
+    .top-voice__link:active & {
+      transform: scale(1.1);
+      transform-origin: center;
+    }
   }
 }
 
@@ -659,13 +663,17 @@ top-blog
     @include mq_up {
       width: get_rem(260px);
     }
-  }
 
-  .card__img {
-    aspect-ratio: 335 / 200;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 335 / 200;
+      object-fit: cover;
 
-    @include mq_up {
-      aspect-ratio: 260 / 200;
+      @include mq_up {
+        aspect-ratio: 260 / 200;
+      }
     }
   }
 }

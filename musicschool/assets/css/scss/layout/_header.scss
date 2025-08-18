@@ -182,68 +182,71 @@
     height: 100%;
     padding-right: get_rem(2px);
   }
-}
 
-.header-nav__item {
-  @include mq_up {
-    height: 100%;
-  }
-}
-
-.header-nav__link {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: get_rem(58px);
-  padding-left: get_rem(20px);
-  font-size: get_rem(18px);
-  font-weight: 700;
-  line-height: get_lh(33px, 18px);
-  background: var(--main-color);
-
-  @include mq_up {
-    height: 100%;
-    padding-left: unset;
-    font-size: get_rem(17px);
-    line-height: get_lh(33px, 17px);
-    background: unset;
-  }
-
-  &:link,
-  &:visited {
-    color: white;
-    text-decoration: none;
-
+  li {
     @include mq_up {
-      color: inherit;
+      height: 100%;
     }
   }
 
-  &:hover,
-  &:active {
-    text-decoration: unset;
-    background: black;
-    opacity: unset;
-
-    @include mq_up {
-      text-decoration: underline;
-      background: unset;
-      opacity: 0.5;
-    }
-  }
-}
-
-.header-nav__contact {
-  display: none;
-
-  @include mq_up {
-    display: grid;
-    width: get_rem(150px);
-    height: get_rem(45px);
-    padding-top: get_rem(2px);
-    font-size: get_rem(15px);
+  a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: get_rem(58px);
+    padding-left: get_rem(20px);
+    font-size: get_rem(18px);
     font-weight: 700;
-    line-height: get_lh(23px, 15px);
+    line-height: get_lh(33px, 18px);
+    background: var(--main-color);
+
+    @include mq_up {
+      height: 100%;
+      padding-left: unset;
+      font-size: get_rem(17px);
+      line-height: get_lh(33px, 17px);
+      background: unset;
+    }
+
+    &:link,
+    &:visited {
+      color: white;
+      text-decoration: none;
+
+      @include mq_up {
+        color: inherit;
+      }
+    }
+
+    &:hover,
+    &:active {
+      text-decoration: unset;
+      background: black;
+      opacity: unset;
+
+      @include mq_up {
+        text-decoration: underline;
+        background: unset;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.header-nav__contact[class] {
+  height: get_rem(45px);
+
+  a {
+    display: none;
+
+    @include mq_up {
+      display: grid;
+      width: get_rem(150px);
+      padding-top: get_rem(2px);
+      font-size: get_rem(15px);
+      font-weight: 700;
+      line-height: get_lh(23px, 15px);
+    }
   }
 }
 

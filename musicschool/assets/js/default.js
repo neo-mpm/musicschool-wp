@@ -1,5 +1,10 @@
 const breakpoint = 768;
 
+// body style is set to 'display: none;' to prevent flash of unstyled content
+document.addEventListener('DOMContentLoaded', (e) => {
+  document.body.style.display = 'block';
+});
+
 // Nav Toggle Button
 const navToggle = document.querySelector('.header-nav__button');
 const navContainer = document.querySelector('.header-nav__container');

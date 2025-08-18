@@ -20,16 +20,18 @@ global $navMenu;
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <?php wp_head(); ?>
+  <?php
+  wp_head();
+  ?>
 </head>
 
-<body>
+<body style="display: none;">
   <header class="header">
     <div class="header__inner inner">
       <?php
+      $home_url = esc_url(home_url('/'));
       $logo_element = <<<EOM
-
-      <a class="header__link" href="../top/">
+      <a class="header__link" href="$home_url">
         <svg class="header__logo">
           <use xlink:href="#logo"></use>
         </svg>
@@ -38,12 +40,19 @@ global $navMenu;
 
 EOM;
 
-      if (is_front_page() || is_search()) {
-        $logo = '<h1 class="header__box">' . $logo_element . '</h1>' . PHP_EOL;
-      } else {
-        $logo = '<div class="header__box">' . $logo_element . '</div>' . PHP_EOL;
-      }
-      echo $logo;
+      if (is_front_page() || is_search()) :
+      ?>
+        <h1 class="header__box">
+          <?= $logo_element ?>
+        </h1>
+      <?php
+      else :
+      ?>
+        <div class="header__box">
+          <?= $logo_element ?>
+        </div>
+      <?php
+      endif;
       ?>
       <nav class="header__nav header-nav">
         <div class="header-nav__button">
@@ -52,15 +61,15 @@ EOM;
           </div>
         </div>
         <div class="header-nav__container">
-          <ul class="header-nav__list">
-            <?php foreach ($navMenu as $key => $value) :
-              if ($key === 'top') continue; ?>
-              <li class="header-nav__item">
-                <a class="header-nav__link" href="../<?= $key ?>/"><?= $value ?></a>
-              </li>
-            <?php endforeach; ?>
-          </ul>
-          <a class="header-nav__contact button" href="../contact/">お問い合わせ</a>
+          <?php
+          wp_nav_menu(
+            array(
+              'menu_class'     => 'header-nav__list',
+              'theme_location' => 'primary',
+              'container'      => false,
+            )
+          );
+          ?>
         </div>
       </nav>
     </div>

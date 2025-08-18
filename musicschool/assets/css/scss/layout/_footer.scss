@@ -112,14 +112,14 @@ links-to-contact
   @include mq_up {
     column-gap: get_rem(33px);
   }
-}
 
-.footer__link[class] {
-  color: white;
+  a {
+    color: white;
 
-  &:hover {
-    text-decoration: underline;
-    opacity: 0.5;
+    &:hover {
+      text-decoration: underline;
+      opacity: 0.5;
+    }
   }
 }
 

@@ -4,7 +4,8 @@
 // button
 // ==========================================================================
 .button,
-.wpcf7-submit {
+.wpcf7-submit,
+.header-nav__contact[class] a {
   display: grid;
   place-items: center;
   color: white;
