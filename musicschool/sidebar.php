@@ -2,7 +2,7 @@
   <aside class="blog-details__magazine blog-details-magazine details-aside">
     <h4 class="blog-details-magazine__head details-aside__title">無料メールマガジン</h4>
     <div class="blog-details-magazine__container">
-      <a href="details.php" class="blog-details-magazine__link">
+      <a href="<?= esc_url(home_url('/')) ?>" class="blog-details-magazine__link">
         <p class="blog-details-magazine__image">バナー広告</p>
       </a>
     </div>
