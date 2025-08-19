@@ -21,7 +21,7 @@
   }
 
   .details-content__card.card {
-    .wp-post-image {
+    img {
       aspect-ratio: 335 / 236;
 
       @include mq_up {

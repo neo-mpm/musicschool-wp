@@ -367,7 +367,7 @@ details-content
     width: 100%;
   }
 }
-.details-content__card.card .wp-post-image {
+.details-content__card.card img {
   display: block;
   width: 100%;
   height: auto;
@@ -376,7 +376,7 @@ details-content
      object-fit: cover;
 }
 @media (width >= 768px) {
-  .details-content__card.card .wp-post-image {
+  .details-content__card.card img {
     aspect-ratio: 600/350;
   }
 }
@@ -718,7 +718,7 @@ details-related
     width: 12.5rem;
   }
 }
-.details-related__card.card .wp-post-image {
+.details-related__card.card img {
   display: block;
   width: 100%;
   height: auto;
@@ -727,7 +727,7 @@ details-related
      object-fit: cover;
 }
 @media (width >= 768px) {
-  .details-related__card.card .wp-post-image {
+  .details-related__card.card img {
     aspect-ratio: 200/140;
   }
 }
@@ -3361,11 +3361,11 @@ result-content
     margin-inline: auto;
   }
 }
-.result-details__container .details-content__card.card .wp-post-image {
+.result-details__container .details-content__card.card img {
   aspect-ratio: 335/236;
 }
 @media (width >= 768px) {
-  .result-details__container .details-content__card.card .wp-post-image {
+  .result-details__container .details-content__card.card img {
     aspect-ratio: 880/400;
   }
 }
