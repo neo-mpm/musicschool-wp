@@ -36,9 +36,13 @@ if (!empty($terms)) :
 
   $the_query = new WP_Query($args);
 
+  if ($post_type === 'result') {
+    $class_name = 'result-details__related ';
+  }
+
   if ($the_query->have_posts()):
 ?>
-    <aside class="blog-details__related details-related details-aside">
+    <aside class="<?= $class_name ?>blog-details__related details-related details-aside">
       <h4 class="details-related__head details-aside__title">関連記事</h4>
       <ul class="details-related__list">
         <?php

@@ -3361,11 +3361,11 @@ result-content
     margin-inline: auto;
   }
 }
-.result-details__container .details-content__card.card .card__img {
+.result-details__container .details-content__card.card .wp-post-image {
   aspect-ratio: 335/236;
 }
 @media (width >= 768px) {
-  .result-details__container .details-content__card.card .card__img {
+  .result-details__container .details-content__card.card .wp-post-image {
     aspect-ratio: 880/400;
   }
 }
@@ -3403,10 +3403,6 @@ result-content
     max-width: 26.875rem;
     margin-top: unset;
   }
-}
-
-.result-details__breadcrumb .breadcrumb__list {
-  line-height: 1.3125;
 }
 
 .result-details__content.details-content .details-content__card.card .card__tag {
@@ -3454,11 +3450,11 @@ result-content
   }
 }
 
-.result-details__bottom {
+.result-details__container[class] .details-content__bottom {
   margin-top: 2.4375rem;
 }
 @media (width >= 768px) {
-  .result-details__bottom {
+  .result-details__container[class] .details-content__bottom {
     -webkit-column-gap: 12.5rem;
        -moz-column-gap: 12.5rem;
             column-gap: 12.5rem;
@@ -3482,11 +3478,11 @@ result-content
     width: 16.25rem;
   }
 }
-.result-details__related .details-related__card.card .card__img[class] {
+.result-details__related .details-related__card.card .card__image img {
   aspect-ratio: 160/113;
 }
 @media (width >= 768px) {
-  .result-details__related .details-related__card.card .card__img[class] {
+  .result-details__related .details-related__card.card .card__image img {
     aspect-ratio: 260/183;
   }
 }

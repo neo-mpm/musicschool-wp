@@ -21,7 +21,7 @@
   }
 
   .details-content__card.card {
-    .card__img {
+    .wp-post-image {
       aspect-ratio: 335 / 236;
 
       @include mq_up {
@@ -62,14 +62,6 @@
     max-width: get_rem(430px);
     margin-top: unset;
   }
-}
-
-// ==========================================================================
-// result-details__breadcrumb
-// ==========================================================================
-
-.result-details__breadcrumb .breadcrumb__list {
-  line-height: get_lh(21px, 16px);
 }
 
 // ==========================================================================
@@ -127,12 +119,14 @@
 // ==========================================================================
 // result-details__bottom
 // ==========================================================================
-.result-details__bottom {
-  margin-top: get_rem(39px);
+.result-details__container[class] {
+  .details-content__bottom {
+    margin-top: get_rem(39px);
 
-  @include mq_up {
-    column-gap: get_rem(200px);
-    margin-top: get_rem(58px);
+    @include mq_up {
+      column-gap: get_rem(200px);
+      margin-top: get_rem(58px);
+    }
   }
 }
 
@@ -156,13 +150,13 @@
       @include mq_up {
         width: get_rem(260px);
       }
-    }
 
-    .card__img[class] {
-      aspect-ratio: 160 / 113;
+      img {
+        aspect-ratio: 160 / 113;
 
-      @include mq_up {
-        aspect-ratio: 260 / 183;
+        @include mq_up {
+          aspect-ratio: 260 / 183;
+        }
       }
     }
 
