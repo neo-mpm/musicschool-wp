@@ -51,7 +51,7 @@
   max-width: get_rem(335px);
   height: get_rem(50px);
   padding-top: get_rem(2px);
-  margin: get_rem(34px) auto 0;
+  margin: get_rem(50px) auto 0;
   font-size: get_rem(20px);
   font-weight: 700;
   line-height: get_lh(26px, 20px);
@@ -59,7 +59,6 @@
   @include mq_up {
     width: get_rem(250px);
     padding-top: get_rem(3px);
-    margin-top: get_rem(20px);
     font-size: get_rem(25px);
     line-height: get_lh(33px, 25px);
   }
@@ -124,6 +123,14 @@ contact__form
       @include mq_up {
         line-height: get_lh(30px, 20px);
       }
+
+      span {
+        margin-left: 5px;
+
+        @include mq_up {
+          margin-left: get_rem(6px);
+        }
+      }
     }
 
     &:last-child dt {
@@ -152,7 +159,8 @@ contact__form
   }
 
   textarea {
-    min-height: get_rem(190px);
+    display: block;
+    height: get_rem(190px);
     padding: get_rem(12px) get_rem(20px);
     font-size: get_rem(15px);
     line-height: get_lh(25px, 15px);
@@ -239,6 +247,10 @@ contact__form
   }
 }
 
+.c-form__submit-area {
+  margin-bottom: get_rem(-35px);
+}
+
 // .contact-form__text-space {
 //   letter-spacing: get_rem(15px);
 
@@ -256,7 +268,7 @@ contact__form
 }
 
 .wpcf7-not-valid-tip {
-  font-size: get_rem(6px);
+  font-size: get_rem(16px);
   color: red;
 }
 
