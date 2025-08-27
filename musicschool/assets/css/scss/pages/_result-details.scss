@@ -49,6 +49,7 @@
   @include mq_up {
     display: flex;
     column-gap: get_rem(40px);
+    align-items: flex-start;
     margin-top: get_rem(55px);
   }
 }
