@@ -15,6 +15,9 @@ const SITE_NAME = 'きたむらミュージックスクール';
 // description
 const DESCRIPTION = '「音楽で生きる」を叶える ミュージックスクール「きたむらミュージックスクール」の公式ホームページです。';
 
+// description prefix
+const DESCRIPTION_PREFIX = 'きたむらミュージックスクール公式ホームページの';
+
 // keywords
 const KEYWORDS = '';
 
