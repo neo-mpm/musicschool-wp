@@ -1019,9 +1019,9 @@ details-related
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-column-gap: 2.125rem;
-       -moz-column-gap: 2.125rem;
-            column-gap: 2.125rem;
+    -webkit-column-gap: 2.0625rem;
+       -moz-column-gap: 2.0625rem;
+            column-gap: 2.0625rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1051,7 +1051,6 @@ details-related
 @media (width >= 768px) {
   .header-nav__list a {
     height: 100%;
-    padding-top: 0.3125rem;
     padding-left: unset;
     font-size: 1.0625rem;
     line-height: 1.9412;

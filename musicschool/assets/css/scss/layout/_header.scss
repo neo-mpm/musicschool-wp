@@ -177,7 +177,7 @@
 .header-nav__list {
   @include mq_up {
     display: flex;
-    column-gap: get_rem(34px);
+    column-gap: get_rem(33px);
     align-items: center;
     height: 100%;
   }
@@ -201,7 +201,6 @@
 
     @include mq_up {
       height: 100%;
-      padding-top: get_rem(5px);
       padding-left: unset;
       font-size: get_rem(17px);
       line-height: get_lh(33px, 17px);
