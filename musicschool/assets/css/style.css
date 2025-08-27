@@ -2946,6 +2946,7 @@ blog-details-category
 }
 
 .contact-button--send {
+  padding-top: unset;
   margin-top: 2.375rem;
 }
 
@@ -3221,6 +3222,7 @@ contact__form
 }
 
 .page404__button {
+  padding-top: unset;
   margin-top: 0.5625rem;
 }
 @media (width >= 768px) {

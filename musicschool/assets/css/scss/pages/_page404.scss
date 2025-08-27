@@ -38,6 +38,7 @@
 }
 
 .page404__button {
+  padding-top: unset;
   margin-top: get_rem(9px);
 
   @include mq_up {
