@@ -56,7 +56,8 @@ body * {
 }
 
 a,
-button {
+button,
+input[type='submit'] {
   transition: 0.3s all;
 
   &:link,
