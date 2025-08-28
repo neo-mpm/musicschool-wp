@@ -162,6 +162,7 @@ contact__form
   textarea {
     display: block;
     height: get_rem(190px);
+    min-height: get_rem(190px);
     padding: get_rem(12px) get_rem(20px);
     font-size: get_rem(15px);
     line-height: get_lh(25px, 15px);
