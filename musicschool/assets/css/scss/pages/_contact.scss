@@ -270,11 +270,17 @@ contact__form
 }
 
 .wpcf7-not-valid-tip {
+  display: none;
   font-size: get_rem(10px);
   color: red;
 
   @include mq_up {
     font-size: get_rem(12px);
+  }
+
+  .wpcf7-form.invalid &,
+  .wpcf7-form.unaccepted {
+    display: block;
   }
 }
 
