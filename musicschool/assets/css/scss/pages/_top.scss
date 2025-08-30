@@ -659,21 +659,15 @@ top-blog
     padding-top: get_rem(68px);
   }
 
-  .card__image {
+  .card__image[class] img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 335 / 200;
+    object-fit: cover;
+
     @include mq_up {
-      width: get_rem(260px);
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 335 / 200;
-      object-fit: cover;
-
-      @include mq_up {
-        aspect-ratio: 260 / 200;
-      }
+      aspect-ratio: 260 / 200;
     }
   }
 }
@@ -694,9 +688,7 @@ top-blog
 }
 
 .top-blog__item {
-  @include mq_up {
-    width: get_rem(260px);
-  }
+  width: 100%;
 }
 
 .top-blog__link {
