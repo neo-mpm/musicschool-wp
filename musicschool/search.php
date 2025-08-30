@@ -16,7 +16,10 @@ get_header();
         if (have_posts()):
           $total_posts = $wp_query->found_posts;
       ?>
-          <h1 class="search-content__head search-content-head blog-content__head"><span class="search-content-head__text">「<span class="search-content-head__text--bold"><?= get_search_query() ?></span>」の検索結果</span><span class="search-content-head__text"><?= $total_posts ?>件</span></h1>
+          <div class="search-content__head search-content-head blog-content__head">
+            <h1 class="search-content-head__text">「<span class="search-content-head__text--bold"><?= get_search_query() ?></span>」の検索結果</h1>
+            <p class="search-content-head__text"><?= $total_posts ?>件</p>
+          </div>
           <div class="search-content__container blog-content__container">
             <?php
             while (have_posts()):

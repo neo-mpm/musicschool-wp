@@ -127,7 +127,7 @@ global $navMenu;
 
 EOM;
 
-      if (is_front_page() || is_search()) :
+      if (is_front_page()) :
       ?>
         <h1 class="header__box">
           <?= $logo_element ?>
