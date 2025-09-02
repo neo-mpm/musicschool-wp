@@ -48,14 +48,6 @@
   }
 }
 
-.card__title-link {
-  &:hover,
-  &:active {
-    text-decoration: underline;
-    opacity: 0.5;
-  }
-}
-
 .card__date {
   display: block;
   margin-top: get_rem(6px);
