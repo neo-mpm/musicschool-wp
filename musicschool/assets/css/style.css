@@ -3305,6 +3305,7 @@ contact__form
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
   font-size: 1.125rem;
   line-height: 1.6667;
 }
