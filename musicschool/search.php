@@ -66,7 +66,10 @@ get_header();
         else :
         ?>
           <div class="search-content__no-result">
-            <p>検索されたキーワードにマッチする<br class="br-sp">記事はありませんでした。</p>
+            <div class="search-content__head search-content-head blog-content__head">
+              <h1 class="search-content-head__text">「<span class="search-content-head__text--bold"><?= get_search_query() ?></span>」の検索結果</h1>
+              <p class="search-content-head__text">0件</p>
+            </div>
             <a onclick="history.back()" class="contact__button contact-button contact-button--send button">戻る</a>
           </div>
         <?php
@@ -74,7 +77,7 @@ get_header();
       else:
         ?>
         <div class="search-content__no-result">
-          <p>検索キーワードが未入力です。</p>
+          <h1>検索キーワードが未入力です。</h1>
           <a onclick="history.back()" class="contact__button contact-button contact-button--send button">戻る</a>
         </div>
       <?php

@@ -25,6 +25,7 @@
 .search-content__head.blog-content__head {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   font-size: get_rem(18px);
   line-height: get_lh(30px, 18px);
 
