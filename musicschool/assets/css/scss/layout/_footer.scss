@@ -114,11 +114,33 @@ links-to-contact
   }
 
   a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
     color: white;
 
+    &::after {
+      @include mq_up {
+        position: absolute;
+        inset: auto 0 get_rem(2px);
+        width: 0;
+        height: get_rem(2px);
+        margin-inline: auto;
+        content: '';
+        background: white;
+        transition: width 0.3s;
+      }
+    }
+
     &:hover {
-      text-decoration: underline;
       opacity: 0.5;
+
+      &::after {
+        @include mq_up {
+          width: 100%;
+        }
+      }
     }
   }
 }

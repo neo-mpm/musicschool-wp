@@ -200,6 +200,7 @@
     background: var(--main-color);
 
     @include mq_up {
+      position: relative;
       height: 100%;
       padding-left: unset;
       font-size: get_rem(17px);
@@ -207,10 +208,22 @@
       background: unset;
     }
 
+    &::after {
+      @include mq_up {
+        position: absolute;
+        inset: auto 0 get_rem(26px);
+        width: 0;
+        height: get_rem(2px);
+        margin-inline: auto;
+        content: '';
+        background: black;
+        transition: width 0.3s;
+      }
+    }
+
     &:link,
     &:visited {
       color: white;
-      text-decoration: none;
 
       @include mq_up {
         color: inherit;
@@ -224,9 +237,12 @@
       opacity: unset;
 
       @include mq_up {
-        text-decoration: underline;
         background: unset;
         opacity: 0.5;
+
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
@@ -245,6 +261,12 @@
       font-size: get_rem(15px);
       font-weight: 700;
       line-height: get_lh(23px, 15px);
+    }
+
+    &::after {
+      @include mq_up {
+        display: none;
+      }
     }
   }
 }
