@@ -43,7 +43,7 @@ if (!empty($terms)) :
   if ($the_query->have_posts()):
 ?>
     <aside class="<?= $class_name ?>blog-details__related details-related details-aside">
-      <h4 class="details-related__head details-aside__title">関連記事</h4>
+      <h2 class="details-related__head details-aside__title">関連記事</h2>
       <ul class="details-related__list">
         <?php
         while ($the_query->have_posts()):
@@ -68,7 +68,7 @@ if (!empty($terms)) :
                 </div>
                 <p class="card__tag"><?= esc_html($term_name) ?></p>
               </div>
-              <h5 class="card__title ellipsis"><?= wp_trim_words(get_the_title(), 32, '...') ?></h5>
+              <h3 class="card__title ellipsis"><?= wp_trim_words(get_the_title(), 32, '...') ?></h3>
               <time class="card__date" datetime="<?php the_time('Y-m-d') ?>"><?php the_time('Y.m.d') ?></time>
             </a>
           </li>
