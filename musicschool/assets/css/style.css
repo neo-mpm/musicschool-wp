@@ -254,7 +254,7 @@ main {
 }
 
 .button,
-.wpcf7-submit,
+.wpcf7-submit[class],
 .header-nav__contact[class] a {
   display: grid;
   place-items: center;
@@ -267,15 +267,15 @@ main {
   border: 1px solid var(--main-color);
 }
 .button:link, .button:visited,
-.wpcf7-submit:link,
-.wpcf7-submit:visited,
+.wpcf7-submit[class]:link,
+.wpcf7-submit[class]:visited,
 .header-nav__contact[class] a:link,
 .header-nav__contact[class] a:visited {
   color: white;
 }
 .button:hover, .button:active,
-.wpcf7-submit:hover,
-.wpcf7-submit:active,
+.wpcf7-submit[class]:hover,
+.wpcf7-submit[class]:active,
 .header-nav__contact[class] a:hover,
 .header-nav__contact[class] a:active {
   color: var(--main-color);
