@@ -3039,9 +3039,6 @@ contact__form
     -webkit-column-gap: 1.875rem;
        -moz-column-gap: 1.875rem;
             column-gap: 1.875rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 @media (width >= 768px) {
@@ -3049,6 +3046,17 @@ contact__form
     min-width: 8.75rem;
     font-size: 1.25rem;
     line-height: 1.65;
+  }
+}
+@media (width >= 768px) {
+  .c-form__input-area dl dt label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 2.5rem;
   }
 }
 @media (width >= 768px) {
@@ -3067,7 +3075,7 @@ contact__form
   }
 }
 .c-form__input-area dl:nth-child(5) dt span {
-  margin-left: 5px;
+  margin-left: 0.3125rem;
 }
 @media (width >= 768px) {
   .c-form__input-area dl:nth-child(5) dt span {
@@ -3076,7 +3084,7 @@ contact__form
 }
 @media (width >= 768px) {
   .c-form__input-area dl:last-child dt {
-    padding-top: 0.5rem;
+    padding-top: 0.3125rem;
   }
 }
 .c-form__input-area dl dd {
@@ -3201,6 +3209,10 @@ contact__form
   .contact.send {
     padding-bottom: 5.625rem;
   }
+}
+
+.wpcf7-form-control-wrap {
+  display: block;
 }
 
 .wpcf7-not-valid-tip {

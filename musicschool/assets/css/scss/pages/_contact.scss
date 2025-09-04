@@ -100,7 +100,6 @@ contact__form
     @include mq_up {
       flex-direction: unset;
       column-gap: get_rem(30px);
-      align-items: center;
     }
 
     dt {
@@ -108,6 +107,14 @@ contact__form
         min-width: get_rem(140px);
         font-size: get_rem(20px);
         line-height: get_lh(33px, 20px);
+      }
+
+      label {
+        @include mq_up {
+          display: flex;
+          align-items: center;
+          height: get_rem(40px);
+        }
       }
     }
 
@@ -126,7 +133,7 @@ contact__form
       }
 
       span {
-        margin-left: 5px;
+        margin-left: get_rem(5px);
 
         @include mq_up {
           margin-left: get_rem(6px);
@@ -136,7 +143,7 @@ contact__form
 
     &:last-child dt {
       @include mq_up {
-        padding-top: get_rem(8px);
+        padding-top: get_rem(5px);
       }
     }
 
@@ -267,6 +274,10 @@ contact__form
   @include mq_up {
     padding-bottom: get_rem(90px);
   }
+}
+
+.wpcf7-form-control-wrap {
+  display: block;
 }
 
 .wpcf7-not-valid-tip {
