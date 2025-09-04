@@ -349,9 +349,19 @@ main {
   font-size: 1rem;
   line-height: 1.875;
 }
+@media (width >= 768px) {
+  .card__text {
+    margin-top: unset;
+  }
+}
 
 .card__text--list {
   -webkit-line-clamp: 5;
+}
+@media (width >= 768px) {
+  .card__text--list {
+    -webkit-line-clamp: 3;
+  }
 }
 
 /* --------------------------------------------------

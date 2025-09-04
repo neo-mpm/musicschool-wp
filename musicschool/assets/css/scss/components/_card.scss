@@ -64,8 +64,16 @@
   margin-top: get_rem(10px);
   font-size: get_rem(16px);
   line-height: get_lh(30px, 16px);
+
+  @include mq_up {
+    margin-top: unset;
+  }
 }
 
 .card__text--list {
   -webkit-line-clamp: 5;
+
+  @include mq_up {
+    -webkit-line-clamp: 3;
+  }
 }
