@@ -1,6 +1,6 @@
 <div class="blog-details__extra">
   <aside class="blog-details__magazine blog-details-magazine details-aside">
-    <h4 class="blog-details-magazine__head details-aside__title">無料メールマガジン</h4>
+    <p class="blog-details-magazine__head details-aside__title">無料メールマガジン</p>
     <div class="blog-details-magazine__container">
       <a href="<?= esc_url(home_url('/')) ?>" class="blog-details-magazine__link">
         <p class="blog-details-magazine__image">バナー広告</p>
@@ -8,7 +8,7 @@
     </div>
   </aside>
   <aside class="blog-details__search blog-details-search details-aside">
-    <h4 class="blog-details-search__head details-aside__title">ブログ内を検索</h4>
+    <p class="blog-details-search__head details-aside__title">ブログ内を検索</p>
     <div class="blog-details-search__container">
       <?php
       get_search_form();
@@ -16,7 +16,7 @@
     </div>
   </aside>
   <aside class="blog-details__recommend blog-details-recommend details-aside">
-    <h4 class="blog-details-recommend__head details-aside__title">おすすめの記事</h4>
+    <p class="blog-details-recommend__head details-aside__title">おすすめの記事</p>
     <ul class="blog-details-recommend__list">
       <?php
       $args = array(
@@ -57,7 +57,7 @@
     </ul>
   </aside>
   <aside class="blog-details__category blog-details-category details-aside">
-    <h4 class="blog-details-category__head details-aside__title">カテゴリー</h4>
+    <p class="blog-details-category__head details-aside__title">カテゴリー</p>
     <ul class="blog-details-category__list">
       <?php
       $terms = get_terms([
