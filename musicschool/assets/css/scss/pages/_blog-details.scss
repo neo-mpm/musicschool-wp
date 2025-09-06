@@ -28,7 +28,7 @@
   }
 }
 
-.blog-details__extra {
+.blog-details__aside {
   @include mq_up {
     flex-shrink: 0;
     max-width: 250px;

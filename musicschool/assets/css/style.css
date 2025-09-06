@@ -2624,7 +2624,7 @@ blog-content
 }
 
 @media (width >= 768px) {
-  .blog-details__extra {
+  .blog-details__aside {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     max-width: 250px;

@@ -1,21 +1,21 @@
-<div class="blog-details__extra">
-  <aside class="blog-details__magazine blog-details-magazine details-aside">
+<aside class="blog-details__aside">
+  <div class="blog-details__magazine blog-details-magazine details-aside">
     <p class="blog-details-magazine__head details-aside__title">無料メールマガジン</p>
     <div class="blog-details-magazine__container">
       <a href="<?= esc_url(home_url('/')) ?>" class="blog-details-magazine__link">
         <p class="blog-details-magazine__image">バナー広告</p>
       </a>
     </div>
-  </aside>
-  <aside class="blog-details__search blog-details-search details-aside">
+  </div>
+  <div class="blog-details__search blog-details-search details-aside">
     <p class="blog-details-search__head details-aside__title">ブログ内を検索</p>
     <div class="blog-details-search__container">
       <?php
       get_search_form();
       ?>
     </div>
-  </aside>
-  <aside class="blog-details__recommend blog-details-recommend details-aside">
+  </div>
+  <div class="blog-details__recommend blog-details-recommend details-aside">
     <p class="blog-details-recommend__head details-aside__title">おすすめの記事</p>
     <ul class="blog-details-recommend__list">
       <?php
@@ -55,8 +55,8 @@
       endif;
       ?>
     </ul>
-  </aside>
-  <aside class="blog-details__category blog-details-category details-aside">
+  </div>
+  <div class="blog-details__category blog-details-category details-aside">
     <p class="blog-details-category__head details-aside__title">カテゴリー</p>
     <ul class="blog-details-category__list">
       <?php
@@ -76,5 +76,5 @@
       endif;
       ?>
     </ul>
-  </aside>
-</div>
+  </div>
+</aside>
