@@ -36,6 +36,7 @@ if (!empty($terms)) :
 
   $the_query = new WP_Query($args);
 
+  $class_name = null;
   if ($post_type === 'result') {
     $class_name = 'result-details__related ';
   }
