@@ -3216,6 +3216,7 @@ contact__form
 }
 
 .wpcf7-not-valid-tip {
+  position: absolute;
   display: none;
   font-size: 0.625rem;
   color: red;
