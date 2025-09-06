@@ -46,7 +46,7 @@
                   ?>
                 </div>
               </div>
-              <h5 class="card__title ellipsis"><?= wp_trim_words(get_the_title(), 15, '...') ?></h5>
+              <p class="card__title ellipsis"><?= wp_trim_words(get_the_title(), 15, '...') ?></p>
             </a>
           </li>
       <?php
